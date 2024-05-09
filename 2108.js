@@ -13,7 +13,6 @@ var firstPalindrome = function (words) {
       let word = words[i].split("").reverse().join("")
       if (words[i] === word) {
           return word;
-
       }
   }
   return "";
