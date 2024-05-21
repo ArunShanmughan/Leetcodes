@@ -19,14 +19,18 @@ var sortSentence = function (s) {
   var reg = /[A-Za-z]/
   var arr = []
   s = s.split(' ');
+  console.log("this is S ->",s)
   let res = s.sort((a, b) => Number(a[a.length - 1]) - Number(b[b.length - 1]))
+  console.log("This is res",res)
   for (let i = 0; i < res.length; i++) {
       let cur = res[i].split("")
+      console.log(cur)
       arr[i] = ""
       for (let j = 0; j < cur.length; j++) {
           if (reg.test(cur[j])) {
               arr[i] += cur[j];
           }
+          console.log(arr[i])
       }
   }
   return arr.join(' ')
